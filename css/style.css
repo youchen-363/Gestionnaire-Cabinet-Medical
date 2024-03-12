@@ -1,0 +1,427 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', serif;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Asap', sans-serif;
+}
+
+/*Variables de couleur*/
+:root {
+    --dark-blue: #253342;
+    --light-blue: #3EB1A8;
+    --white: #FFFFFF;
+    --light-gray: #F5F5F5;
+    --dark-gray: #5D636A;
+}
+
+/* sections */
+html, body {
+    height: 100%;
+    width: 100%;
+    scroll-behavior: auto !important;
+    background-color: var(--light-gray);
+}
+
+.identification {
+    background-color: var(--white);
+}
+
+header, footer {
+    background-color: var(--dark-blue);
+}
+
+footer {
+    height: 160px;
+}
+
+/* navbar */
+.navbar-laptop {
+    display: flex !important;
+}
+
+.navbar-phone {
+    display: none !important;
+}
+
+.navbar-toggler {
+    height: 50px;
+    position: relative;
+    width: 50px;
+    border: none;
+    outline: none;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none !important;
+}
+
+#hamburger {
+    width: 30px;
+    height: 4px;
+    background: var(--white);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .5s;
+}
+
+#hamburger::before, #hamburger::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 4px;
+    background: var(--white);
+    transition: .5s;
+}
+
+#hamburger::before {
+    top: -10px;
+    left: 0;
+}
+
+#hamburger::after {
+    top: 10px;
+    left: 0;
+}
+
+.offcanvas {
+    background-color: var(--dark-blue);
+}
+
+.buttonDisconnect {
+    border: none !important;
+    background: none !important;
+}
+
+/* cards */
+
+
+.card {
+    border: 1px solid var(--light-blue);
+    border-radius: 15px;
+}
+
+.card-large {
+    width: 31rem;
+    height: 28rem;
+    margin: auto 3rem;
+    animation: zoom-out 0.4s forwards;
+}
+
+.card-medium {
+    width: 34rem;
+    height: 12rem;
+}
+
+.card-medium:not(.card-active) {
+    animation: zoom-out 0.4s forwards;
+}
+
+.card-active {
+    background-color: rgba(62, 177, 168, 0.20);
+    border: 3px solid var(--light-blue);
+}
+
+.card-form {
+    border: 1px solid var(--dark-gray);
+}
+
+.card-form .card-header {
+    background-color: var(--dark-gray);
+    border-radius: 15px 15px 0 0;
+}
+
+.card-large:hover, .card-medium:not(.card-active):hover {
+    animation: zoom-in 0.4s forwards;
+}
+
+@keyframes zoom-in {
+    0% {
+        transform: scale(1, 1);
+    }
+    100% {
+        transform: scale(1.05, 1.05);
+    }
+}
+
+@keyframes zoom-out {
+    0% {
+        transform: scale(1.05, 1.05);
+    }
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+.card-title {
+    font-weight: bold;
+    color: var(--dark-blue);
+}
+
+.card-large .card-title {
+    font-size: 32px;
+}
+
+.card-medium .card-title {
+    font-size: 24px;
+}
+
+.card-text {
+    color: var(--dark-gray);
+    line-height: 150%;
+}
+
+.card-large .card-text {
+    font-size: 24px;
+}
+
+.card-medium .card-text {
+    font-size: 20px;
+}
+
+/* reste */
+
+h6 {
+    color: var(--white);
+}
+
+a {
+    color: var(--white);
+    margin: auto 0;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.card a {
+    color: #000000;
+}
+
+.div-center a {
+    padding: 20px 50px;
+}
+
+.div-center a:hover {
+    background-color: var(--light-blue);
+}
+
+.div-center a .partSelected {
+    background-color: var(--light-blue);
+}
+
+i {
+    padding-top: 5px;
+    font-size: 40px;
+    color: var(--white);
+    cursor: pointer;
+}
+
+
+
+
+
+
+.usager-content {
+    background-color: var(--white);
+}
+
+.accordionHeader {
+    background-color: var(--light-blue);
+    border-radius: 15px 15px 0px 0px;
+}
+
+.accordionHeader h5 {
+    color: var(--white);
+}
+
+.accordion img {
+    border-radius: 25px;
+    width: 22rem;
+    height: 25rem;
+}
+
+.divProfileImg {
+    margin-right: 4rem;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: var(--white) !important;
+}
+
+.accordion-button::after {
+    margin: 0;
+}
+
+.accordion-button.collapsed::after {
+    background-image: none;
+    content: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='21' height='16' viewBox='0 0 21 16' fill='none'%3e%3cpath d='M18 3L10.5 11.4783L3 3' stroke='%233EB1A8' stroke-width='5' stroke-linecap='round'/%3e%3c/svg%3e");
+}
+  
+.accordion-button:not(.collapsed)::after {
+    background-image: none;
+    content: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='21' height='16' viewBox='0 0 21 16' fill='none'%3e%3cpath d='M18 3L10.5 11.4783L3 3' stroke='%233EB1A8' stroke-width='5' stroke-linecap='round'/%3e%3c/svg%3e");
+}
+
+input[type=search] {
+    background-color: var(--light-gray);
+}
+
+.formPart {
+    color: var(--light-blue);
+}
+
+
+button, input {
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+.form-control {
+    border: none; /* Supprimez les autres bordures */
+    border-bottom: 3px solid rgba(101, 114, 128, 0.50); /* Ajoutez une bordure en bas avec la couleur de votre choix */
+    border-radius: 0;
+    padding: 3px 0;
+}
+
+.form-control:focus {
+    border-bottom: 3px solid rgba(101, 114, 128, 0.50);
+}
+
+.form-control::placeholder {
+    color: rgba(101, 114, 128, 0.50);
+}
+
+.identification .form-control {
+    border-radius: 5px;
+    border: none;
+    background-color: var(--light-gray);
+}
+
+.form-floating label {
+    color: var(--dark-gray);
+}
+
+.form-floating > input + label:after {
+    background-color: var(--light-gray) !important;
+}
+
+
+.input-group-text {
+    background-color: var(--light-blue);
+    border: 1px solid var(--dark-blue);
+    border-radius: 5px;
+    border-left: none;
+    padding: 2px 4px;
+}
+
+.identification .input-group {
+    width: 25rem;
+}
+
+.identification .input-group-text {
+    height: 58px;
+    padding: 10px;
+    background-color: var(--light-gray);
+    border: none;
+}
+
+#connexion {
+    border: 3px solid var(--white);
+}
+
+#connexion:disabled {
+    background-color: var(--white);
+    border: 3px solid #657280;
+
+}
+
+.datepicker {
+    padding: 0 10px;
+    border: 1px solid var(--dark-blue);
+    border-radius: 5px;
+}
+
+.datepicker:focus {
+    border: 1px solid var(--dark-blue);
+    border-radius: 5px;
+}
+
+.form-control:-webkit-autofill,
+.form-control:-webkit-autofill:hover, 
+.form-control:-webkit-autofill:focus, 
+.form-control:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 1000px white inset !important; /* Vous pouvez ajuster la couleur "white" à vos besoins */
+    box-shadow: 0 0 0 1000px white inset !important;
+}
+
+.form-floating .form-control:-webkit-autofill,
+.form-floating .form-control:-webkit-autofill:hover, 
+.form-floating .form-control:-webkit-autofill:focus, 
+.form-floating .form-control:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 1000px var(--light-gray) inset !important; /* Vous pouvez ajuster la couleur "white" à vos besoins */
+    box-shadow: 0 0 0 1000px var(--light-gray) inset !important;
+}
+
+.btn-bd-primary {
+    --bs-btn-color: var(--white);
+    --bs-btn-bg: var(--light-blue);
+    --bs-btn-border-color: var(--light-blue);
+    --bs-btn-hover-color: var(--white);
+    --bs-btn-hover-bg: #389b93;
+}
+
+.partSelected {
+    background-color: var(--light-blue);
+}
+
+@media screen and (max-width: 2000px){
+    .card-large {
+        margin: auto 2rem;
+    }
+}
+
+@media screen and (max-width: 1600px) {
+    .card-large .card-text {
+        margin: 0 1rem !important;
+    }
+
+    .card-large {
+        margin: auto 1rem;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .card-large .card-text {
+        margin: 0 0.5rem !important;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .main-content {
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    .card-large {
+        margin: 1rem auto;
+    }
+
+    .card-large.card-text {
+        margin: 0 3rem !important;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .navbar-laptop {
+        display: none !important;
+    }
+    
+    .navbar-phone {
+        display: flex !important;
+    }
+
+}
